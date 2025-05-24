@@ -123,7 +123,11 @@ img {
 }
 /* main-about */
 .main-about {
-  background-color: #2e2f42;
+  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 188px 0;
 }
@@ -178,8 +182,18 @@ img {
 }
 .strategy-studio-list {
   display: flex;
-  justify-content: space-between;
   gap: 24px;
+}
+.strategy-studio-icon {
+  padding: 24px 100px;
+  border: 1px solid #8e8f99;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.strategy-studio-icon svg {
+  width: 64px;
+  height: 64px;
 }
 .strategy-studio-list > .strategy-studio-elements {
   width: calc((100% - 24px) / 4);
@@ -233,7 +247,25 @@ img {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .our-team-text {
-  padding: 32px 0;
+  padding: 32px 16px;
+}
+.our-team-icon {
+  margin-top: 8px;
+  display: flex;
+  gap: 24px;
+}
+.our-team-icon-element {
+  width: calc((100% - 24px) / 4);
+  padding: 12px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+.our-team-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.our-team-icon use {
+  fill: #f4f4fd;
 }
 /* our-portfolio */
 .our-portfolio {
@@ -265,7 +297,10 @@ img {
   padding: 100px 0;
 }
 .footer-container .container {
-  display: block;
+  display: flex;
+}
+.footer-icon-link {
+  margin-right: 120px;
 }
 .footer-title {
   display: inline-block;
@@ -291,4 +326,30 @@ footer .post-text {
   color: #f4f4fd;
   max-width: 264px;
   padding: 0;
+}
+.footer-social-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0,32px;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-social-element {
+  width: calc((100% - 16px) / 4);
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+.footer-social-element svg {
+  width: 24px;
+  height: 24px;
+}
+.footer-social-element use {
+  fill:  #f4f4fd;
 }
