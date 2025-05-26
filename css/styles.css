@@ -290,7 +290,6 @@ img {
 .our-team-icon-element {
   width: 40px;
   height: 40px;
-  padding: 12px;
   background-color: #4d5ae5;
   border-radius: 50%;
   transition-property: background-color;
@@ -312,6 +311,9 @@ img {
   transition-delay: 0ms;
 }
 .our-team-social-link:hover {
+  background-color: #404bbf;
+}
+.our-team-social-link:focus {
   background-color: #404bbf;
 }
 .our-team-svg {
