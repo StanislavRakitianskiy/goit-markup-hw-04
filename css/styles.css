@@ -87,12 +87,16 @@ img {
   letter-spacing: 0.32px;
   padding: 24px 0;
   display: block;
+  position: relative;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
 .nav-link .nav-link-element:hover {
   color: #404bbf;
 }
 .nav-link .nav-link-element:active {
-  text-decoration: underline;
   color: #404bbf;
 }
 .nav-link .nav-link-element:focus {
@@ -100,6 +104,16 @@ img {
 }
 .nav-header .title-name-first:active {
   color: #404bbf;
+}
+.nav-link .nav-link-element:active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
 }
 .address-post {
   font-style: normal;
@@ -116,6 +130,10 @@ img {
   letter-spacing: 0.32px;
   padding: 24px 0;
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
 .address-link:hover,
 .address-link:focus {
@@ -157,11 +175,15 @@ img {
   border-radius: 4px;
   min-width: 169px;
   height: 56px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
-.main-about button:hover {
+.main-about .about-button:hover {
   background-color: #404bbf;
 }
-.main-about button:focus {
+.main-about .about-button:focus {
   background-color: #404bbf;
 }
 /* strategy-studio */
@@ -246,6 +268,9 @@ img {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+.our-team-element:hover .our-team-icon-element {
+  background-color: #404bbf;
+}
 .our-team-text {
   padding: 32px 16px;
 }
@@ -255,10 +280,15 @@ img {
   gap: 24px;
 }
 .our-team-icon-element {
-  width: calc((100% - 24px) / 4);
+  width: 40px;
+  height: 40px;
   padding: 12px;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
 .our-team-icon svg {
   width: 16px;
@@ -281,9 +311,46 @@ img {
   gap: 24px;
   row-gap: 48px;
 }
+.our-portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+.our-portfolio-text-hover {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+.our-portfolio-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: #f4f4fd;
+}
 .our-portfolio-elements {
   width: calc((100% - 48px) / 3);
   text-align: left;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+.our-portfolio-elements:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.our-portfolio-elements:hover .our-portfolio-text-hover {
+  transform: translateY(0);
 }
 .our-portfolio-box-text {
   padding: 32px 16px;
@@ -333,7 +400,7 @@ footer .post-text {
   font-weight: 500;
   color: #fff;
   line-height: 1.5;
-  letter-spacing: 0,32px;
+  letter-spacing: 0.32px;
   margin-bottom: 16px;
 }
 .footer-social-list {
@@ -341,15 +408,23 @@ footer .post-text {
   gap: 16px;
 }
 .footer-social-element {
-  width: calc((100% - 16px) / 4);
+  width: 40px;
+  height: 40px;
   padding: 8px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+.footer-social-element:hover {
+  background-color: #31d0aa;
 }
 .footer-social-element svg {
   width: 24px;
   height: 24px;
 }
 .footer-social-element use {
-  fill:  #f4f4fd;
+  fill: #f4f4fd;
 }
