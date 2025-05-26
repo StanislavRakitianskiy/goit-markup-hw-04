@@ -441,7 +441,7 @@ footer .post-text {
 .footer-social-link:hover {
   background-color: #31d0aa;
 }
-.footer-social-link:active {
+.footer-social-link:focus {
   background-color: #31d0aa;
 }
 .footer-svg {
